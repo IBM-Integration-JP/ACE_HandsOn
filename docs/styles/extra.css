@@ -1,0 +1,103 @@
+/* ============================================================
+   JAPANESE DOCUMENTATION – TYPOGRAPHY + LAYOUT ENHANCEMENTS
+   ============================================================ */
+
+/* ---------- FONT STACK (JP-first, clean fallback) ---------- */
+.md-typeset {
+  font-family:
+    "Noto Sans JP",
+    "Yu Gothic", "YuGothic",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Meiryo",
+    -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ---------- HEADINGS (consistent JP typography) ---------- */
+.md-typeset h1 { font-size: 1.95rem; font-weight: 700; line-height: 1.3; }
+.md-typeset h2 { font-size: 1.65rem; font-weight: 650; line-height: 1.35; }
+.md-typeset h3 { font-size: 1.35rem; font-weight: 600; line-height: 1.4; }
+.md-typeset h4 { font-size: 1.15rem; font-weight: 550; }
+.md-typeset h5 { font-size: 1.05rem; font-weight: 500; }
+.md-typeset h6 { font-size: 0.92rem; font-weight: 450; letter-spacing: 0.01em; }
+
+/* Offset for scroll-anchor links */
+.md-typeset h1,
+.md-typeset h2 {
+    scroll-margin-top: 80px;
+}
+
+/* Light mode heading color */
+[data-md-color-scheme="default"] .md-typeset h1,
+[data-md-color-scheme="default"] .md-typeset h2,
+[data-md-color-scheme="default"] .md-typeset h3,
+[data-md-color-scheme="default"] .md-typeset h4,
+[data-md-color-scheme="default"] .md-typeset h5,
+[data-md-color-scheme="default"] .md-typeset h6 {
+  color: #000 !important;
+}
+
+/* Dark mode heading color */
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4,
+[data-md-color-scheme="slate"] .md-typeset h5,
+[data-md-color-scheme="slate"] .md-typeset h6 {
+  color: #fff !important;
+}
+
+
+/* ---------- CODE & PRE (JP-friendly monospace) ---------- */
+.md-typeset code {
+    font-size: .92em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas,
+                 "Liberation Mono", "Noto Sans Mono",
+                 "Source Han Code JP", monospace;
+}
+
+.md-typeset pre > code {
+    font-size: .92em;
+}
+
+
+/* ---------- TABLE IMPROVEMENTS ---------- */
+.md-typeset table thead th {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+/* Zebra stripes for readability */
+.md-typeset table tbody tr:nth-child(odd) {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 6%, transparent);
+}
+
+.md-typeset .tbl-accent thead th {
+  background: var(--md-accent-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+
+/* ---------- FULL-WIDTH LAYOUT ON LARGE SCREENS ---------- */
+@media (min-width: 1280px) {
+  .md-grid,
+  .md-content,
+  .md-main__inner {
+    max-width: 100%;
+  }
+}
+
+
+/* ---------- IMAGE HANDLING (show original size, no forced scale) ---------- */
+.md-typeset img {
+  display: block;
+  margin: 1.2rem auto;
+  width: auto;            /* natural width */
+  height: auto;           /* natural height */
+  max-width: 100%;        /* but never overflow */
+  max-height: 100%;
+  image-rendering: auto;
+}

@@ -1,0 +1,110 @@
+site_name: App Connect Enterprise V13 ハンズオン
+site_description: ACE ハンズオン
+site_url: https://Abhishek-Kumar-Paul.github.io/ace-handson-jp/
+repo_name: ace-handson-jp
+repo_url: https://github.ibm.com/cloudpak4intjp/ace-handson-jp
+
+theme:
+  name: material
+  logo: images/logo.png
+  language: ja    # 日本語
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode  
+  features:
+    - content.code.copy         # コードコピーボタン有効化
+    - content.code.annotate     # コードの注釈有効化
+    - content.tabs.link         # コンテンツタブの有効化
+    - navigation.top            # トップに戻るボタン有効化
+    - navigation.top.sticky     # スクロールしてもトップに戻るボタンを表示
+    - navigation.footer
+    #- navigation.tabs          # ナビゲーションタブ有効化
+    #- navigation.tabs.sticky   # スクロールしてもナビゲーションタブを表示
+    - toc.integrate
+    
+
+
+# Paths here are **relative to docs_dir** (default: docs/)
+extra_css:
+  - styles/extra.css
+
+nav:
+  - ホーム: index.md
+  - 準備:
+      - 01-準備の概要: 準備/01-準備の概要.md
+      - 02-TechZone環境払い出し: 準備/02-TechZone環境払い出し.md
+      - 03-Windowsの日本語化: 準備/03-Windowsの日本語化.md
+      - 04-Windowsのロケール変更: 準備/04-Windowsのロケール変更.md
+      - 05-Studentsファイルの準備: 準備/05-Studentsファイルの準備.md
+      - 06-MQのインストール: 準備/06-MQのインストール.md
+      - 07-MQ-Explorerのインストール: 準備/07-MQ-Explorerのインストール.md
+      - 08-ACEのインストール: 準備/08-ACEのインストール.md
+      - 09-aceadmユーザー作成: 準備/09-aceadmユーザー作成.md
+      - 10-ACE-LanguagePackのインストール: 準備/10-ACE-LanguagePackのインストール.md
+      - 11-PostgreSQLServerのインストール: 準備/11-PostgreSQLServerのインストール.md
+      - 12-PostgreJDBCドライバーのインストール: 準備/12-PostgreJDBCドライバーのインストール.md
+      - 13-データの作成: 準備/13-データの作成.md
+      - 14-PostgreSQLにaceadmユーザー作成: 準備/14-PostgreSQLにaceadmユーザー作成.md
+  - 演習:
+      - 0-演習の概要: 演習/0-演習の概要.md
+      - 1-MQ,ACEの基礎と環境確認・セットアップ: 演習/1-MQ,ACEの基礎と環境確認・セットアップ.md
+      - 2-シンプルなメディエーション開発: 演習/2-シンプルなメディエーション開発.md
+      - 3-Webサービス連携処理の開発: 演習/3-Webサービス連携処理の開発.md
+      - 4-ファイル連携とデータベース・アクセス: 演習/4-ファイル連携とデータベース・アクセス.md
+      - 5-（オプション）追加演習の準備: 演習/5-（オプション）追加演習の準備.md
+      - 6-（オプション）データベース連携シナリオ: 演習/6-（オプション）データベース連携シナリオ.md
+      - 7-（オプション）REST API アプリケーションの開発: 演習/7-（オプション）REST API アプリケーションの開発.md
+
+plugins:
+  - gh-admonitions
+  - search:
+      lang: ja
+  - glightbox   # image pop up
+  - print-site:
+      add_table_of_contents: false
+      add_full_urls: false
+      enabled: true
+      print_page_title: App Connect Enterprise V13 ハンズオン
+      enumerate_headings: false
+
+extra:
+  generator: false               # MkDocsのフッター非表示
+  alternate:                    # 日本語ページのみサポート
+    - name: 日本語ページのみサポート
+      link: /
+      lang: ja
+
+markdown_extensions:
+  - tables                      # Markdownテーブルの有効化
+  - admonition                  # 警告文拡張 ex)Note, Tip
+  - pymdownx.details            # 詳細ブロック拡張 警告文の開閉ができる版
+  - footnotes                   # 注釈拡張
+  - attr_list                   # 生成されるHTMLに属性追加の拡張
+  - md_in_html                  # HTML内のMarkdownをHTMLに変換する拡張
+  - pymdownx.keys               # キーコードを装飾する拡張
+  - attr_list                   # enable attribute lists
+  - pymdownx.tabbed:            # コンテンツタブ
+      alternate_style: true     # コンテンツタブの有効化
+  - pymdownx.highlight:         # コードハイライト拡張
+      use_pygments: true        # pygmentsの使用を有効化
+      pygments_style: monokai   # pygmentsのスタイル
+      #linenums: false          # 行番号表示なし(必要なところは個別で指定)
+      pygments_lang_class: true # コードの言語に応じたCSSクラスの有効化
+  - pymdownx.tasklist:          # タスクリスト拡張
+      custom_checkbox: true     # チェックボックスの推奨スタイル有効化
+      clickable_checkbox: true  # チェックボックスのクリック有効化
+  - pymdownx.superfences:       # コードフェンス拡張 コードとか警告文とか色々ネストできるようになる
+      custom_fences:
+        - name: mermaid         # Mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+# Copyright
+copyright: Copyright © 2025 IBM Japan, Ltd. All rights reserved.
