@@ -27,7 +27,7 @@ Client Encoding [SJIS]:
 | Port [5432]: | Enterキー押します |
 | Username [postgres] | Enterキー押します |
 | Client Encoding [SJIS] | Enterキー押します |
-| ユーザー postgres のパスワード | %TGBnhy6 |
+| ユーザー postgres のパスワード | (パスワード) |
 
 ログイン成功後：
 
@@ -55,7 +55,7 @@ mydb=#
 
 - 「aceadm」 PostgreSQL ユーザーを作成します。
 ```SQL
-CREATE USER aceadm WITH PASSWORD '%TGBnhy6';
+CREATE USER aceadm WITH PASSWORD '(パスワード)';
 ```
 
 - データベース「mydb」に接続権限を付与します。
