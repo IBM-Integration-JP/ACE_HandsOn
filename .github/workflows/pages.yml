@@ -32,6 +32,7 @@ jobs:
           pip install mkdocs
           pip install mkdocs-material
           pip install pygments
+          pip install mkdocs-github-admonitions-plugin
 
       - name: Build site
         run: mkdocs build
